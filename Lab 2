@@ -1,0 +1,79 @@
+# lab2 - abhi vishwas - SKU Tool
+# Ask the user to enter the product name.
+# Ask the user to enter the product’s price as a decimal value with no dollar sign. See sample output below.
+# Ask the user to enter the product’s current SKU.
+# Display this information to the user.
+
+product_name = input('please enter the product name good sir or madam: ')
+product_price = float(input('please enter the products price, use a decimal value with no dollar sign: '))
+product_sku = input('please enter the products sku: ') 
+
+product = product_name , product_price , product_sku  
+print('Here is the product and the related info:', product)
+
+#Using your knowledge of Python, modify the entered information in the following ways:
+#Increase price by 10%. 
+#Add “New-” to the product name.
+
+# looks for user input in binary
+print('{0} {1}'.format('YES', 'NO'))  
+
+d = input ('y - 1 / n - 0: ')
+
+# manipulations to make new values 
+if d == '1' :
+  # update product name 
+  # update price
+  print ('here is the New-' + product_name)
+  print ('here is the updated price:', product_price * 1.10)
+  #Create a new SKU which is every third letter of the old SKU. Each letter in the new SKU must be capitalized.
+  #Display this new information to the user. 
+  # create pointer for SKU
+  new_sku = product_sku
+  new_sku = new_sku[2::3]
+  print('here is the new SKU: ' + new_sku.upper())
+
+#Test Runs 
+'''
+print('should i conduct the desired change?')
+answer = input("Enter Y for yes or N for no: ")
+if answer.upper() == 'Y':
+    print("this will do the calculation")
+else:
+    exit()
+'''
+''' 
+ string=list(product_sku)
+ for index,item in enumerate(string):
+    product_name = string.replace(3,3,3)  
+    # replaces third position with a capitilized 3 character
+    print ('here is the new SKU' + product_name)
+
+  # initializing string
+  test_str = product_sku
+  # printing original string
+  print("The original string is : " + str(test_str))
+  # initializing a and b 
+  a = ''
+  b = 3
+  res = ''
+  for idx, ele in enumerate(test_str):
+    a = ele(test_string)
+    # add a if idx is multiple of b
+    if idx % b == 1 and idx != 0:
+      res = res + ele
+    else:
+      res = res + ele
+    # printing result
+    print("Here is the updated SKU: " + str(res))
+''' 
+# end of test runs 
+
+
+
+
+
+
+
+ 
+
