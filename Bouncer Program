@@ -1,0 +1,6 @@
+age = int(input('what is your age')) 
+
+if age <= 21:
+  print("SALUD SENOR")
+elif age > 21:
+  ('why does it say mclovin on your id?')
