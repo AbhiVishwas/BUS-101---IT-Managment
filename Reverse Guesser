@@ -1,0 +1,204 @@
+### imports 
+import random
+import time
+guess = random.randint(1,20) 
+
+
+def options(): 
+    print ('Enter h for too high')
+    print ('Enter l for too low')
+    print ('Enter c when I am right!')
+    
+
+
+def guessGame (): 
+
+  # greetings
+  myName = input ('whats your name ????: ')
+  time.sleep (1)
+  print ('BOOTING NEURAL LINK')
+  time.sleep (3)
+  print ('NEURAL LINK ACTIVE')
+  time.sleep (2)
+  print ('lets see how fast i can read your mind ' + myName)
+  time.sleep (1)
+  print ('i will guess a number between 1 through twenty: ',guess)
+
+  # game logic
+  playerTurn = 0 
+  newGuess = guess
+  # checks game is still going
+  while playerTurn != 1:
+    print ('Enter h for too high')
+    print ('Enter l for too low')
+    print ('Enter c when I am right!')
+    userInput = input ('which is the case?: ') 
+
+    # high
+    if userInput == 'h':
+      newGuess = newGuess - random.randint(1,4)
+      # negative response
+      if newGuess <= 0: 
+        newGuess = 1 
+      print ('Here is my guess!: ', newGuess)
+
+    # low
+    elif userInput == 'l':
+      newGuess = newGuess + random.randint(1,4)
+      # positive response
+      if newGuess >= 20: 
+        newGuess = 20 
+      print ('Here is my guess!: ', newGuess)
+
+    # GG EASY
+    elif userInput == 'c':
+      print('Congrats Human! I read your mind! Here, have a joke')
+      time.sleep(2)
+      print('WHATS THE MOST EXPENSIVE STREAMING PLATFORM?')
+      time.sleep(5)
+      print('COLLEGE')
+      time.sleep(2)
+      print('*ROBOT LAUGHTER*')
+      playerTurn = 1  
+
+guessGame()
+
+'''
+def options(): 
+    print ('Enter h for too high')
+    print ('Enter l for too low')
+    print ('Enter c when I am right!')
+
+def guessNum ():
+  # create gueses
+  guess = random.randint(1,20) 
+
+  # greetings
+  myName = input ('whats your name ????: ')
+  #time.sleep (1)
+  print ('BOOTING NEURAL LINK')
+  #time.sleep (3)
+  print ('NEURAL LINK ACTIVE')
+  print ('lets see how fast i can read your mind ' + myName)
+  print ('i will guess a number between 1 through twenty: ', guess)
+  options()
+
+  # game logic
+  while guess not in ('1', '20'):
+    myResponse = input ()
+    # h
+    if myResponse == 'h': 
+      guess = guess - random.randint(1,4)
+      print('HOW BOUT THIS????????', guess)
+      continue
+    # l  
+    elif myResponse == 'l' :
+      guess = guess + random.randint(1,4)
+      print('HOW BOUT THIS????????', guess)
+      continue
+    # c 
+    elif myResponse == 'c': 
+      print('Congrats Human! I read your mind! Here, have a joke')
+      time.sleep(2)
+      print('WHATS THE MOST EXPENSIVE STREAMING PLATFORM?')
+      time.sleep(5)
+      print('COLLEGE')
+
+  if guess == ('4'):
+    guess = guess - random.randint(1,1)
+    print('HOW BOUT THIS????????', guess)
+    myResponse = input()
+  if guess == ('2'):
+    guess = guess - random.randint(1,1)
+    print('HOW BOUT THIS????????', guess)
+    myResponse = input()  
+  if guess == ('0'):
+    guess = 1
+    print('HOW BOUT THIS????????', guess)
+    myResponse = input()  
+  if guess == ('1'):
+    guess = 1
+    print('HOW BOUT THIS????????', guess)
+    myResponse = input()
+    
+  if guess == ('16'):
+    guess = guess + random.randint(1,1)
+    print('HOW BOUT THIS????????', guess)
+    myResponse = input()
+
+  if guess == ('20') or guess == ('21'):
+    guess = 20
+    print('HOW BOUT THIS????????', guess)
+    myResponse = input()
+  
+guessNum()
+    
+
+def game(): 
+  # create guess
+  guess = random.randint(1,20)
+  name = input('Let me Read Your Mind, Enter your Name To Start: ')
+  print ('Please Think Of A NUMBER 1-20 ' + name)
+
+  # greet the user 
+  print('Here is my guess,', guess, 'did i get it right?')
+
+  # find player input
+  playerChoice = input('Input h for high, l for low, and c for Cerfect: ')
+
+  # game logic using input
+  # guess count ? 
+
+  while playerChoice != 'c' and guess < 20 and guess > 0:
+
+    # h 
+    if playerChoice == 'h':
+      guess = guess - random.randint(1,4)
+      print('HOW BOUT THIS????????', guess)
+      playerChoice = input('Input h for high, l for low, and c for Cerfect: ')
+      if guess <= 0:
+        if guess == 0:
+          guess = 1
+          print('HOW BOUT THIS????????', guess)
+          playerChoice = input('Input l for low, and c for Cerfect: ')
+        else:
+          guess = 1
+          print('HOW BOUT THIS????????', guess)
+          playerChoice = input('Input l for low, and c for Cerfect: ')
+          game()
+
+    # l 
+    elif playerChoice == 'l':
+      guess = guess + random.randint(1,4)
+      print('HOW BOUT THIS????????', guess)
+      playerChoice = input('Input h for high, l for low, and c for Cerfect: ')
+
+    elif guess > 19: 
+      guess = 20
+      playerChoice = input('Input h for high and c for Cerfect: ')
+
+    if guess >= 20:
+        if guess == 20:
+          guess = 20
+          print('HOW BOUT THIS????????', guess)
+          playerChoice = input('Input l for low, and c for Cerfect: ')  
+        else:
+          guess = 20
+          print('HOW BOUT THIS????????', guess)
+          playerChoice = input('Input l for low, and c for Cerfect: ')
+          game()
+        
+   
+    
+  # correct
+  if playerChoice == 'c': 
+    print('Congrats Human! I read your mind! Here, have a joke')
+    time.sleep(2)
+    print('WHATS THE MOST EXPENSIVE STREAMING PLATFORM?')
+    time.sleep(5)
+    print('COLLEGE')
+
+game()
+
+    
+'''
